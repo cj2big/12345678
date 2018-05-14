@@ -41,10 +41,10 @@ $(document).ready(function(){
        table_data += '<th>'+cell_data[cell_count]+'</th>';
       }
       else if (cell_count === 3) {
-       if (cell_data[cell_count].includes("open?id")) {
-           var getImg = cell_data[cell_count].replace("/open?id=", "/file/d/") + '/view';
-           }
-           table_data += '<td><img src="' + getImg +'" alt="' + cell_data[cell_count] + '" height="200" width="200">';
+           var locate = cell_data[cell_count];
+           var checkR = locate.replace("/open?id=", "/file/d/");
+           var getImg = checkR + '/view';
+           table_data += '<td><img src="' + getImg +'" alt="' + getImg + '" height="200" width="200">';
       }
       else
       {
