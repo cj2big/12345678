@@ -41,7 +41,10 @@ $(document).ready(function(){
        table_data += '<th>'+cell_data[cell_count]+'</th>';
       }
       else if (cell_count === 3) {
-       table_data += '<td><img src="' + cell_data[cell_count]+'" alt="' + cell_data[cell_count] + '" height="200" width="200">';
+       if (cell_data[cell_count].includes("open?id") {
+           cell_data[cell_count].replace("/open?id=", "/file/d/") + '/view';
+           }
+           table_data += '<td><img src="' + cell_data[cell_count]+'" alt="' + cell_data[cell_count] + '" height="200" width="200">';
       }
       else
       {
