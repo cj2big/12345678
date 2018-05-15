@@ -48,6 +48,8 @@ $(document).ready(function(){
       if(count === 0)
       {
        table_data += '<th>'+cell_data[cell_count]+'</th>';
+      } else if (cell_count[cell_data] === "") {
+      table_data += '<td></td>';
       }
       else if (cell_count === 3) {
            var locate = cell_data[cell_count];
