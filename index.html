@@ -53,7 +53,7 @@ $(document).ready(function(){
            var locate = cell_data[cell_count];
            var checkR = locate.replace("/open?id=", "/file/d/");
            var getImg = checkR + '/view';
-           table_data += '<td><a href="' + locate +'">';
+           table_data += '<td><a href="' + locate +'">View Image</a>';
       }
       else
       {
@@ -72,6 +72,7 @@ $(document).ready(function(){
 <script>
 function filterTable(j) {
   var input, filter, table, tr, td, i;
+ j = 1;
   input = document.getElementById("myInput");
   filter = input.value.toUpperCase();
   table = document.getElementById("myTable");
