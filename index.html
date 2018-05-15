@@ -53,7 +53,7 @@ $(document).ready(function(){
            var locate = cell_data[cell_count];
            var checkR = locate.replace("/open?id=", "/file/d/");
            var getImg = checkR + '/view';
-           table_data += '<td><a href="' + locate +'">View Image</a>';
+           table_data += '<td><a target="_blank" href="' + locate +'">View Image</a>';
       }
       else
       {
