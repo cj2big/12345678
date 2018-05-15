@@ -18,7 +18,9 @@
   </style>
  </head>
  <body>
-  <input type="text" id="myInput" onkeyup="filterTable()" placeholder="Search for names.." title="Type in a name">
+  <input type="text" id="myInput" onkeyup="filterTable(1)" placeholder="Search By Question" title="Type in a name">
+  <input type="text" id="myInput" onkeyup="filterTable(2)" placeholder="Search By Answer" title="Type in a name">
+  <input type="text" id="myInput" onkeyup="filterTable(0)" placeholder="Search By Chapter" title="Type in a name">
   <div class="container">
    <div class="table-responsive">
     <div id="myTable">
@@ -68,14 +70,14 @@ $(document).ready(function(){
 });
 </script>
 <script>
-function filterTable() {
+function filterTable(j) {
   var input, filter, table, tr, td, i;
   input = document.getElementById("myInput");
   filter = input.value.toUpperCase();
   table = document.getElementById("myTable");
   tr = table.getElementsByTagName("tr");
   for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[1];
+    td = tr[i].getElementsByTagName("td")[j];
     if (td) {
       if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
         tr[i].style.display = "";
